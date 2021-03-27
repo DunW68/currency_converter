@@ -8,7 +8,7 @@ def convert():
     another = input('What currency do you want? > ')
     while len(another) != 0:
         amount = float(input('How much do you have? > '))
-        if cache.get(another) is None:
+        if cache.get(another) is not None:
             print('Checking the cache...')
             print('Oh! It is in the cache!')
             print(f'You received {round(amount * cache[another], 2)} {another.upper()}.')
